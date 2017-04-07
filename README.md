@@ -3,9 +3,11 @@
 
 [![NPM](https://nodei.co/npm/dateformat.png?downloads=true)](https://www.npmjs.com/package/dateformat)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-dateformat/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-dateformat_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-dateformat/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-dateformat/build/screenCapture.buildNpmdoc.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-dateformat%2Ftmp%2Fbuild%2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-dateformat/build/apidoc.html)
 
-![package-listing](https://npmdoc.github.io/node-npmdoc-dateformat/build/screen-capture.npmPackageListing.svg)
+![npmPackageListing](https://npmdoc.github.io/node-npmdoc-dateformat/build/screenCapture.npmPackageListing.svg)
+
+![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-dateformat/build/screenCapture.npmPackageDependencyTree.svg)
 
 
 
