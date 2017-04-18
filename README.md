@@ -1,9 +1,14 @@
-# api documentation for  [dateformat (v2.0.0)](https://github.com/felixge/node-dateformat)  [![npm package](https://img.shields.io/npm/v/npmdoc-dateformat.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-dateformat) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-dateformat.svg)](https://travis-ci.org/npmdoc/node-npmdoc-dateformat)
+# npmdoc-dateformat
+
+#### api documentation for  [dateformat (v2.0.0)](https://github.com/felixge/node-dateformat)  [![npm package](https://img.shields.io/npm/v/npmdoc-dateformat.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-dateformat) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-dateformat.svg)](https://travis-ci.org/npmdoc/node-npmdoc-dateformat)
+
 #### A node.js package for Steven Levithan's excellent dateFormat() function.
 
-[![NPM](https://nodei.co/npm/dateformat.png?downloads=true)](https://www.npmjs.com/package/dateformat)
+[![NPM](https://nodei.co/npm/dateformat.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/dateformat)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-dateformat/build/screenCapture.buildNpmdoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-dateformat%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-dateformat/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-dateformat/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-dateformat/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-dateformat/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-dateformat/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-dateformat/build/screenCapture.npmPackageListing.svg)
 
@@ -27,12 +32,10 @@
             "name": "Steven Levithan"
         },
         {
-            "name": "Felix Geisendörfer",
-            "email": "felix@debuggable.com"
+            "name": "Felix Geisendörfer"
         },
         {
-            "name": "Christoph Tavan",
-            "email": "dev@tavan.de"
+            "name": "Christoph Tavan"
         },
         {
             "name": "Jon Schlinkert",
@@ -59,21 +62,17 @@
     "main": "lib/dateformat",
     "maintainers": [
         {
-            "name": "ctavan",
-            "email": "dev@tavan.de"
+            "name": "ctavan"
         },
         {
-            "name": "felixge",
-            "email": "felix@debuggable.com"
+            "name": "felixge"
         },
         {
-            "name": "jonschlinkert",
-            "email": "github@sellside.com"
+            "name": "jonschlinkert"
         }
     ],
     "name": "dateformat",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/felixge/node-dateformat.git"
@@ -84,18 +83,6 @@
     "version": "2.0.0"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module dateformat](#apidoc.module.dateformat)
-1.  object <span class="apidocSignatureSpan">dateformat.</span>i18n
-1.  object <span class="apidocSignatureSpan">dateformat.</span>masks
-
-
-
-# <a name="apidoc.module.dateformat"></a>[module dateformat](#apidoc.module.dateformat)
 
 
 
