@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/felixge/node-dateformat"
-
-    >dateformat (v2.0.0)</a>
+    <a href="https://github.com/felixge/node-dateformat">dateformat (v2.0.0)</a>
 </h1>
 <h4>A node.js package for Steven Levithan's excellent dateFormat() function.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.dateformat">module dateformat</a><ol>
 
@@ -99,8 +92,8 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">dateformat = function (date, mask, utc, gmt) {
 
-      // You can&#x27;t provide utc if you skip other args (use the &#x27;UTC:&#x27; mask prefix)
-      if (arguments.length === 1 &#x26;&#x26; kindOf(date) === &#x27;string&#x27; &#x26;&#x26; !/\d/.test(date)) {
+      // You can't provide utc if you skip other args (use the 'UTC:' mask prefix)
+      if (arguments.length === 1 &amp;&amp; kindOf(date) === 'string' &amp;&amp; !/\d/.test(date)) {
         mask = date;
         date = undefined;
       }
@@ -112,30 +105,30 @@
       }
 
       if (isNaN(date)) {
-        throw TypeError(&#x27;Invalid date&#x27;);
+        throw TypeError('Invalid date');
       }
 
-      mask = String(dateFormat.masks[mask] || mask || dateFormat.masks[&#x27;default&#x27;]);
+      mask = String(dateFormat.masks[mask] || mask || dateFormat.masks['default']);
 
       // Allow setting the utc/gmt argument via the mask
       var maskSlice = mask.slice(0, 4);
-      if (maskSlice === &#x27;UTC:&#x27; || maskSlice === &#x27;GMT:&#x27;) {
+      if (maskSlice === 'UTC:' || maskSlice === 'GMT:') {
         mask = mask.slice(4);
         utc = true;
-        if (maskSlice === &#x27;GMT:&#x27;) {
+        if (maskSlice === 'GMT:') {
           gmt = true;
         }
       }
 
-      var _ = utc ? &#x27;getUTC&#x27; : &#x27;get&#x27;;
-      var d = date[_ + &#x27;Date&#x27;]();
-      var D = date[_ + &#x27;Day&#x27;]();
-      var m = date[_ + &#x27;Month&#x27;]();
-      var y = date[_ + &#x27;FullYear&#x27;]();
-      var H = date[_ + &#x27;Hours&#x27;]();
-      var M = date[_ + &#x27;Minutes&#x27;]();
-      var s = date[_ + &#x27;Seconds&#x27;]();
-      var L = date[_ + &#x27;Milliseconds&#x27;]();
+      var _ = utc ? 'getUTC' : 'get';
+      var d = date[_ + 'Date']();
+      var D = date[_ + 'Day']();
+      var m = date[_ + 'Month']();
+      var y = date[_ + 'FullYear']();
+      var H = date[_ + 'Hours']();
+      var M = date[_ + 'Minutes']();
+      var s = date[_ + 'Seconds']();
+      var L = date[_ + 'Milliseconds']();
       var o = utc ? 0 : date.getTimezoneOffset();
       var W = getWeek(date);
       var N = getDayOfWeek(date);
@@ -160,13 +153,13 @@
         ss:   pad(s),
         l:    pad(L, 3),
         L:    pad(Math.round(L / 10)),
-        t:    H &#x3c; 12 ? &#x27;a&#x27;  : &#x27;p&#x27;,
-        tt:   H &#x3c; 12 ? &#x27;am&#x27; : &#x27;pm&#x27;,
-        T:    H &#x3c; 12 ? &#x27;A&#x27;  : &#x27;P&#x27;,
-        TT:   H &#x3c; 12 ? &#x27;AM&#x27; : &#x27;PM&#x27;,
-        Z:    gmt ? &#x27;GMT&#x27; : utc ? &#x27;UTC&#x27; : (String(date).match(timezone) || [&#x27;&#x27;]).pop().replace(timezoneClip, &#x27;&#x27;),
-        o:    (o &#x3e; 0 ? &#x27;-&#x27; : &#x27;+&#x27;) + pad(Math.floor(Math.abs(o) / 60) * 100 + Math.abs(o) % 60, 4),
-        S:    [&#x27;th&#x27;, &#x27;st&#x27;, &#x27;nd&#x27;, &#x27;rd&#x27;][d % 10 &#x3e; 3 ? 0 : (d % 100 - d % 10 != 10) * d % 10],
+        t:    H &lt; 12 ? 'a'  : 'p',
+        tt:   H &lt; 12 ? 'am' : 'pm',
+        T:    H &lt; 12 ? 'A'  : 'P',
+        TT:   H &lt; 12 ? 'AM' : 'PM',
+        Z:    gmt ? 'GMT' : utc ? 'UTC' : (String(date).match(timezone) || ['']).pop().replace(timezoneClip, ''),
+        o:    (o &gt; 0 ? '-' : '+') + pad(Math.floor(Math.abs(o) / 60) * 100 + Math.abs(o) % 60, 4),
+        S:    ['th', 'st', 'nd', 'rd'][d % 10 &gt; 3 ? 0 : (d % 100 - d % 10 != 10) * d % 10],
         W:    W,
         N:    N
       };
@@ -194,3 +187,4 @@
     ]
 </div>
 </div>
+</body></html>

@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.dateformat.dateformat">
+            function <span class="apidocSignatureSpan"></span>dateformat
+            <span class="apidocSignatureSpan">(date, mask, utc, gmt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dateformat.</span>i18n</span>
 
         </li>
@@ -79,6 +88,99 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.dateformat" id="apidoc.module.dateformat">module dateformat</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dateformat.dateformat" id="apidoc.element.dateformat.dateformat">
+        function <span class="apidocSignatureSpan"></span>dateformat
+        <span class="apidocSignatureSpan">(date, mask, utc, gmt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dateformat = function (date, mask, utc, gmt) {
+
+      // You can&#x27;t provide utc if you skip other args (use the &#x27;UTC:&#x27; mask prefix)
+      if (arguments.length === 1 &#x26;&#x26; kindOf(date) === &#x27;string&#x27; &#x26;&#x26; !/\d/.test(date)) {
+        mask = date;
+        date = undefined;
+      }
+
+      date = date || new Date;
+
+      if(!(date instanceof Date)) {
+        date = new Date(date);
+      }
+
+      if (isNaN(date)) {
+        throw TypeError(&#x27;Invalid date&#x27;);
+      }
+
+      mask = String(dateFormat.masks[mask] || mask || dateFormat.masks[&#x27;default&#x27;]);
+
+      // Allow setting the utc/gmt argument via the mask
+      var maskSlice = mask.slice(0, 4);
+      if (maskSlice === &#x27;UTC:&#x27; || maskSlice === &#x27;GMT:&#x27;) {
+        mask = mask.slice(4);
+        utc = true;
+        if (maskSlice === &#x27;GMT:&#x27;) {
+          gmt = true;
+        }
+      }
+
+      var _ = utc ? &#x27;getUTC&#x27; : &#x27;get&#x27;;
+      var d = date[_ + &#x27;Date&#x27;]();
+      var D = date[_ + &#x27;Day&#x27;]();
+      var m = date[_ + &#x27;Month&#x27;]();
+      var y = date[_ + &#x27;FullYear&#x27;]();
+      var H = date[_ + &#x27;Hours&#x27;]();
+      var M = date[_ + &#x27;Minutes&#x27;]();
+      var s = date[_ + &#x27;Seconds&#x27;]();
+      var L = date[_ + &#x27;Milliseconds&#x27;]();
+      var o = utc ? 0 : date.getTimezoneOffset();
+      var W = getWeek(date);
+      var N = getDayOfWeek(date);
+      var flags = {
+        d:    d,
+        dd:   pad(d),
+        ddd:  dateFormat.i18n.dayNames[D],
+        dddd: dateFormat.i18n.dayNames[D + 7],
+        m:    m + 1,
+        mm:   pad(m + 1),
+        mmm:  dateFormat.i18n.monthNames[m],
+        mmmm: dateFormat.i18n.monthNames[m + 12],
+        yy:   String(y).slice(2),
+        yyyy: y,
+        h:    H % 12 || 12,
+        hh:   pad(H % 12 || 12),
+        H:    H,
+        HH:   pad(H),
+        M:    M,
+        MM:   pad(M),
+        s:    s,
+        ss:   pad(s),
+        l:    pad(L, 3),
+        L:    pad(Math.round(L / 10)),
+        t:    H &#x3c; 12 ? &#x27;a&#x27;  : &#x27;p&#x27;,
+        tt:   H &#x3c; 12 ? &#x27;am&#x27; : &#x27;pm&#x27;,
+        T:    H &#x3c; 12 ? &#x27;A&#x27;  : &#x27;P&#x27;,
+        TT:   H &#x3c; 12 ? &#x27;AM&#x27; : &#x27;PM&#x27;,
+        Z:    gmt ? &#x27;GMT&#x27; : utc ? &#x27;UTC&#x27; : (String(date).match(timezone) || [&#x27;&#x27;]).pop().replace(timezoneClip, &#x27;&#x27;),
+        o:    (o &#x3e; 0 ? &#x27;-&#x27; : &#x27;+&#x27;) + pad(Math.floor(Math.abs(o) / 60) * 100 + Math.abs(o) % 60, 4),
+        S:    [&#x27;th&#x27;, &#x27;st&#x27;, &#x27;nd&#x27;, &#x27;rd&#x27;][d % 10 &#x3e; 3 ? 0 : (d % 100 - d % 10 != 10) * d % 10],
+        W:    W,
+        N:    N
+      };
+
+      return mask.replace(token, function (match) {
+        if (match in flags) {
+          return flags[match];
+        }
+        return match.slice(1, match.length - 1);
+      });
+    }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
 
