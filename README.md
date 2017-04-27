@@ -1,6 +1,6 @@
 # npmdoc-dateformat
 
-#### api documentation for  [dateformat (v2.0.0)](https://github.com/felixge/node-dateformat)  [![npm package](https://img.shields.io/npm/v/npmdoc-dateformat.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-dateformat) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-dateformat.svg)](https://travis-ci.org/npmdoc/node-npmdoc-dateformat)
+#### basic api documentation for  [dateformat (v2.0.0)](https://github.com/felixge/node-dateformat)  [![npm package](https://img.shields.io/npm/v/npmdoc-dateformat.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-dateformat) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-dateformat.svg)](https://travis-ci.org/npmdoc/node-npmdoc-dateformat)
 
 #### A node.js package for Steven Levithan's excellent dateFormat() function.
 
@@ -80,7 +80,8 @@
     "scripts": {
         "test": "mocha"
     },
-    "version": "2.0.0"
+    "version": "2.0.0",
+    "bin": {}
 }
 ```
 
